@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JetpackTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="fragment_a">第一个</string>
+    <string name="fragment_b">第二个</string>
+    <string name="fragment_c">第三个</string>
+</resources>

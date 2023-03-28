@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentA">  <!--配置默认启动的第一个页面-->
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.hsf.JetpackTest.FragmentA"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/fragmentC"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.hsf.JetpackTest.FragmentB"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC" />
+        <argument
+            android:name="argument_age"
+            app:argType="integer"
+            android:defaultValue="25" />
+        <argument
+            android:name="height"
+            app:argType="float"
+            android:defaultValue="1.67" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.hsf.JetpackTest.FragmentC"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_fragmentC_self"
+            app:destination="@id/fragmentC"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/deepLinkFragment"
+        android:name="com.hsf.JetpackTest.DeepLinkFragment"
+        android:label="fragment_deep_link"
+        tools:layout="@layout/fragment_deep_link">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.deeplink.com/{id}" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeBottom"
+        android:icon="@drawable/icon_terminal"
+        android:iconTint="#435432"
+        android:title="终端">
+    </item>
+
+    <item android:id="@+id/first"
+        android:icon="@drawable/icon_template"
+        android:title="节目">
+    </item>
+
+    <item android:id="@+id/bluetooth"
+        android:icon="@drawable/icon_blue"
+        android:title="基站">
+    </item>
+
+    <item android:id="@+id/second"
+        android:icon="@drawable/icon_my"
+        android:title="我">
+    </item>
+
+</menu>

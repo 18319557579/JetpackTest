@@ -1,0 +1,6 @@
+include ':mvvm'
+include ':fixed'
+include ':coordinator'
+include ':viewpager'
+include ':app'
+rootProject.name = "JetpackTest"
