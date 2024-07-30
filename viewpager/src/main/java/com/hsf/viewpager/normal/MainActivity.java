@@ -10,6 +10,11 @@ import com.hsf.viewpager.base.LogActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ViewPager2的简单使用
+ *
+ * 适配器使用自定义RecyclerView.Adapter
+ */
 public class MainActivity extends LogActivity {
 
     private List<ViewPagerModel> viewPagerList = new ArrayList<>();
@@ -21,6 +26,8 @@ public class MainActivity extends LogActivity {
 
         initData();
         ViewPager2 viewPager2 = findViewById(R.id.vp_main);
+
+        //这里使用的RecyclerView.Adapter的适配器
         VpAdapter vpAdapter = new VpAdapter(viewPagerList);
         viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         viewPager2.setAdapter(vpAdapter);

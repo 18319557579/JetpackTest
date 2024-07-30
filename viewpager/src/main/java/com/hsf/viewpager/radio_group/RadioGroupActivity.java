@@ -11,6 +11,12 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.hsf.viewpager.R;
 import com.hsf.viewpager.base.LogActivity;
 
+/**
+ * ViewPage2 和 RadioGroup 的结合使用
+ *
+ * 适配器使用了官方的 FragmentStateAdapter，因此内容就是一个个的Fragment
+ * ViewPager2 和 RadioGroup 的选中可以互相影响
+ */
 public class RadioGroupActivity extends LogActivity implements RadioGroup.OnCheckedChangeListener{
     private ViewPager2 vpBody;
 

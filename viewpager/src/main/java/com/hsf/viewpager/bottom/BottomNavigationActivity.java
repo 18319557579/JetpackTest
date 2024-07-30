@@ -16,6 +16,12 @@ import com.hsf.viewpager.radio_group.MessageFragment;
 import com.hsf.viewpager.radio_group.MyFragment;
 import com.hsf.viewpager.radio_group.VpAndRgAdapter;
 
+/**
+ * ViewPager2 和 BottomNavigationView 的结合使用
+ *
+ * 适配器使用了官方的 FragmentStateAdapter，因此内容就是一个个的Fragment
+ * ViewPager2 和 BottomNavigationView 可以相互影响
+ */
 public class BottomNavigationActivity extends LogActivity {
     private ViewPager2 vp;
     private BottomNavigationView bnv;

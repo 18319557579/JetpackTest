@@ -3,12 +3,20 @@ package com.hsf.viewpager.withtab;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.hsf.viewpager.R;
 import com.hsf.viewpager.base.BaseActivity;
 
+/**
+ * ViewPage2 和 TabLayout 的结合使用
+ *
+ * 适配器使用了官方的 FragmentStateAdapter，因此内容就是一个个的Fragment
+ * ViewPager2 和 TabLayout 可以相互影响
+ */
 public class WithTabActivity extends BaseActivity {
 
     private ViewPager2 vp2;
@@ -19,7 +27,9 @@ public class WithTabActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
 
+        //这里使用的是FragmentStateAdapter适配器
         TabAdapter tabAdapter = new TabAdapter(this);
+
         tabLayout = findViewById(R.id.tl_head);
         vp2 = findViewById(R.id.vp_body);
         vp2.setAdapter(tabAdapter);
